@@ -13,7 +13,7 @@ class HomeController extends Controller
 {
 
     public function index() {
-       $categories = Category::with("posts")->getEagerLoads();
+       $categories = Category::with("posts")->get();
 
 
         return view("pages.index",compact("categories"));

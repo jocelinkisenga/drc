@@ -38,7 +38,7 @@ https://templatemo.com/tm-590-topic-listing
                 <div class="container">
                     <a class="navbar-brand" href="/">
                         <i class="bi-back"></i>
-                        <span>Congo</span>
+                        <span>RDC</span>
                     </a>
 
                     <div class="d-lg-none ms-auto me-4">
@@ -52,7 +52,7 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-lg-5 me-lg-auto">
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Acceuil</a>
+                                <a class="nav-link click-scroll" href="/">Acceuil</a>
                             </li>
 
                             <li class="nav-item">
@@ -60,7 +60,7 @@ https://templatemo.com/tm-590-topic-listing
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_4">FAQs</a>
+                                <a class="nav-link click-scroll" href="">FAQs</a>
                             </li>
 
                             <li class="nav-item">
@@ -69,7 +69,7 @@ https://templatemo.com/tm-590-topic-listing
                         </ul>
 
                         <div class="d-none d-lg-block">
-                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                            {{-- <a href="#top" class="navbar-icon bi-person smoothscroll"></a> --}}
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="row">
 
                         <div class="col-lg-8 col-12 mx-auto">
-                            <h1 class="text-white text-center">Decouvre. Voyage. Apprécie</h1>
+                            <h1 class="text-white text-center">Decouvre. <span class="text-danger">Voyage</span>. <span class="text-warning">Apprécie</span></h1>
 
                             <h6 class="text-center">Découvre le congo</h6>
 
@@ -114,7 +114,7 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="col-lg-3 col-12 mb-4 pb-2">
                         <a class="navbar-brand mb-2" href="index.html">
                             <i class="bi-back"></i>
-                            <span>Topic</span>
+                            <span>RDC</span>
                         </a>
                     </div>
 
@@ -122,13 +122,9 @@ https://templatemo.com/tm-590-topic-listing
                         <h6 class="site-footer-title mb-3">Resources</h6>
 
                         <ul class="site-footer-links">
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Home</a>
-                            </li>
 
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">How it works</a>
-                            </li>
+
+
 
                             <li class="site-footer-link-item">
                                 <a href="#" class="site-footer-link">FAQs</a>
@@ -144,20 +140,20 @@ https://templatemo.com/tm-590-topic-listing
                         <h6 class="site-footer-title mb-3">Information</h6>
 
                         <p class="text-white d-flex mb-1">
-                            <a href="tel: 305-240-9671" class="site-footer-link">
-                                305-240-9671
+                            <a href="tel: " class="site-footer-link">
+                                +243 8500244690
                             </a>
                         </p>
 
                         <p class="text-white d-flex">
-                            <a href="mailto:info@company.com" class="site-footer-link">
-                                info@company.com
+                            <a href="mailto:lushidev01@gmail.com" class="site-footer-link">
+                                lushidev01@gmail.com
                             </a>
                         </p>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-                        <div class="dropdown">
+                        {{-- <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             English</button>
 
@@ -168,10 +164,10 @@ https://templatemo.com/tm-590-topic-listing
 
                                 <li><button class="dropdown-item" type="button">Arabic</button></li>
                             </ul>
-                        </div>
+                        </div> --}}
 
-                        <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
-                        <br><br>Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution <a href="https://themewagon.com">ThemeWagon</a></p>
+                        <p class="copyright-text mt-lg-5 mt-4">Copyright © Congo. All rights reserved.
+                        <br><br>
 
                     </div>
 

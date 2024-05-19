@@ -6,7 +6,11 @@ use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Models\Category;
+use App\Models\Viewer;
 use Carbon\Carbon;
+use Illuminate\Http\Request as HttpRequest;
+use Illuminate\Support\Facades\Request;
+use Symfony\Component\HttpFoundation\Request as HttpFoundationRequest;
 
 class PostController extends Controller
 {
@@ -15,14 +19,15 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy("created_at","desc")->paginate(10);
+        $posts = Post::orderBy("created_at", "desc")->paginate(10);
         return view("pages.listArticles", compact("posts"));
     }
 
-    public function front(){
-        $articles = Post::orderBy("created_at","desc")->paginate(12);
+    public function front()
+    {
+        $articles = Post::orderBy("created_at", "desc")->paginate(12);
 
-        return view("pages.articles",compact("articles"));
+        return view("pages.articles", compact("articles"));
     }
 
     /**
@@ -31,7 +36,7 @@ class PostController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view("pages.addArticle",["categories" => $categories]);
+        return view("pages.addArticle", ["categories" => $categories]);
     }
 
     /**
@@ -40,29 +45,41 @@ class PostController extends Controller
     public function store(StorePostRequest $request)
     {
 
-        $imgName = Carbon::now()->timestamp .'patrickngoy.' . $request->file('image')->extension();
-        $path = $request->file("image")->storeAs('uploads',$imgName,'public');
+        $imgName = Carbon::now()->timestamp . 'patrickngoy.' . $request->file('image')->extension();
+        $path = $request->file("image")->storeAs('uploads', $imgName, 'public');
 
         Post::create([
             "category_id" => $request->category_id,
             "title" => $request->title,
             "slug" => $request->slug,
             "image" => $imgName,
-             "description" => $request->description
+            "description" => $request->description
         ]);
 
         return redirect()->route("dashboard");
-
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(int $id)
+    public function show(HttpFoundationRequest $request, $slug)
     {
-        $post = Post::findOrFail($id);
+
+        $post = Post::where("slug", $slug)->firstOrFail();
         $categories = Category::all();
-        return view("pages.article",compact("post","categories"));
+        $viewer = Viewer::where("post_id", $post->id)->where("user_ip_address", $request->ip())->first();
+
+        if (is_null($viewer)) {
+            Viewer::create([
+                "post_id" => $post->id,
+                "user_ip_address" => $request->ip(),
+                "viewers" => 1
+            ]);
+        } else {
+            $viewer->update(["viewers" => $viewer->viewers + 1]);
+        }
+
+        return view("pages.article", compact("post", "categories"));
     }
 
     /**

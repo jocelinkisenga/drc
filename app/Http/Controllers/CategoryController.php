@@ -40,7 +40,7 @@ class CategoryController extends Controller
      */
     public function show( int $id)
     {
-        $posts = Post::whereCategoryId($id)->latest()->paginate(12)->get();
+        $posts = Post::whereCategoryId($id)->latest()->paginate(12);
         $category = Category::findOrFail($id);
         return view("pages.categories", compact("posts", "category"));
     }

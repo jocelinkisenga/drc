@@ -37,7 +37,7 @@
                                         @forelse ($posts as $post)
                                             <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-4">
                                             <div class="custom-block bg-white shadow-lg">
-                                                <a href="{{ route("posts.show", ["id" => $post->id]) }}">
+                                                <a href="{{ route("posts.show", ["slug" => $post->slug]) }}">
                                                     <div class="d-flex">
                                                         <div>
                                                             <h5 class="mb-2">{{ $post->title }}</h5>
@@ -45,7 +45,7 @@
                                                             <p class="mb-0">{{ Illuminate\Support\Str::limit($post->slug, 18) }}</p>
                                                         </div>
 
-                                                        <span class="badge bg-design rounded-pill ms-auto">14</span>
+                                                        <span class="badge bg-design rounded-pill ms-auto">{{ $post->viewers_count }}</span>
                                                     </div>
 
                                                     <img src="{{ asset("storage/uploads/". $post->image) }}" class="custom-block-image img-fluid" alt="">
@@ -57,7 +57,7 @@
                                         @endforelse
                                     </div>
                                 </div>
-                                
+
 
                                 {{-- <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
                                     <div class="row">

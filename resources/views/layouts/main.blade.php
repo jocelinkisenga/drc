@@ -38,7 +38,9 @@ https://templatemo.com/tm-590-topic-listing
                 <div class="container">
                     <a class="navbar-brand" href="/">
                         <i class="bi-back"></i>
-                        <span>RDC</span>
+                        <span class="text-primary">R</span>
+                        <span class="text-danger">D</span>
+                        <span class="text-warning">C</span>
                     </a>
 
                     <div class="d-lg-none ms-auto me-4">
@@ -91,9 +93,11 @@ https://templatemo.com/tm-590-topic-listing
 
                                     </span>
 
-                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="Design, Code, Marketing, Finance ..." aria-label="Search">
+                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="cherche ton endroit..." aria-label="Search">
 
-                                    <button type="submit" class="form-control">Search</button>
+                                    <button type="submit" class="form-control">             <span class="text-primary">che</span>
+                        <span class="text-warning">r</span>
+                        <span class="text-danger">che</span></button>
                                 </div>
                             </form>
                         </div>
@@ -114,7 +118,9 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="col-lg-3 col-12 mb-4 pb-2">
                         <a class="navbar-brand mb-2" href="index.html">
                             <i class="bi-back"></i>
-                            <span>RDC</span>
+                        <span class="text-primary">R</span>
+                        <span class="text-danger">D</span>
+                        <span class="text-warning">C</span>
                         </a>
                     </div>
 

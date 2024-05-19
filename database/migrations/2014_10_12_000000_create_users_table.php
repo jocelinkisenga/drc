@@ -25,9 +25,9 @@ return new class extends Migration
         });
 
         User::create([
-            "name" => "patrick Ngoy",
-            "email" => "visionbilion365@gmail.com",
-            "password" => Hash::make("PatrickNgoy12123"),
+            "name" => "congo",
+            "email" => "congo@gmail.com",
+            "password" => Hash::make("congo pays"),
             "role_id" => true,
         ]);
     }

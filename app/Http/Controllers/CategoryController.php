@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use App\Models\Category;
+use App\Models\Post;
 
 class CategoryController extends Controller
 {
@@ -37,9 +38,11 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show( int $id)
     {
-        //
+        $posts = Post::whereCategoryId($id)->latest()->paginate(12)->get();
+        $category = Category::findOrFail($id);
+        return view("pages.categories", compact("posts", "category"));
     }
 
     /**

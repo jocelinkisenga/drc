@@ -7,16 +7,17 @@ use App\Models\Coupon;
 use App\Models\Post;
 use App\Models\Video;
 use Carbon\Carbon;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
 
     public function index() {
-       $categories = Category::with("posts")->get();
+$categories = Category::latest()->get();
+$posts = Post::inRandomOrder()->latest()->limit(12)->get();
 
-
-        return view("pages.index",compact("categories"));
+        return view("pages.index",compact("categories", "posts"));
     }
 
     public function dashboard()  {

@@ -38,7 +38,7 @@
                 </a>
 
                 <div class="d-lg-none ms-auto me-4">
-                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    {{-- <a href="#top" class="navbar-icon bi-person smoothscroll"></a> --}}
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,20 +48,20 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-lg-5 me-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="/">Acceuil</a>
+                            <a class="nav-link text-white" href="#">Acceuil</a>
+                        </li>
+
+                        {{-- <li class="nav-item">
+                            <a class="nav-link " href="/">Catégories</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">Catégories</a>
+                            <a class="nav-link " href="">FAQs</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="">FAQs</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_5">Contact</a>
-                        </li>
+                            <a class="nav-link " href="#section_5">Contact</a>
+                        </li> --}}
                     </ul>
 
                     <div class="d-none d-lg-block">
@@ -73,13 +73,27 @@
 
 
         <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+
             <div class="container">
+            <div class="row justify-center">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <ul class="nav nav-tabs" style="background-color:none;" id="myTab" role="tablist">
+
+                                @foreach(\App\Models\Category::all() as $key => $category)
+                                <li class="nav-item " role="presentation">
+                                    <a href="{{ route("front.categorie",["id" => $category->id]) }}" class="nav-link text-white" id="{{ $category->title }}">{{ $category->title }}</a>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+
                 <div class="row">
 
                     <div class="col-lg-8 col-12 mx-auto">
-                        <h1 class="text-primary text-center">Decouvre. <span class="text-danger">Voyage</span>. <span class="text-warning">Apprécie</span></h1>
-
-                        <h6 class="text-center">Découvre le congo</h6>
+                        <h2 class="text-primary text-center">Decouvre. <span class="text-danger">Voyage</span>. <span class="text-warning">Apprécie</span></h2>
 
                         {{-- livewire search --}}
                         @livewire("search")

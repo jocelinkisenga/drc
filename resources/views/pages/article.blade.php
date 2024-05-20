@@ -12,7 +12,7 @@
                             <h2 class="text-white">{{ $post->title }}</h2>
 
                             <div class="d-flex align-items-center mt-5">
-                                <a href="#topics-detail" class="btn custom-btn custom-border-btn smoothscroll me-4">Read More</a>
+                                <a href="#topics-detail" class="btn custom-btn custom-border-btn smoothscroll me-4"></a>
 
                                 <a href="#top" class="custom-icon bi-bookmark smoothscroll"></a>
                             </div>

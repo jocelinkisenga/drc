@@ -43,10 +43,10 @@
 
                                             <p class="mb-0">{{ Illuminate\Support\Str::limit($post->slug, 30) }}</p>
 
-                                            <a href="{{ route("posts.show",["slug" => $post->slug]) }}" class="btn custom-btn mt-3 mt-lg-4">Learn More</a>
+                                            <a href="{{ route("posts.show",["slug" => $post->slug]) }}" class="btn bg-primary text-white mt-3 mt-lg-4">En savoir plus</a>
                                         </div>
 
-                                        <span class="badge bg-music rounded-pill ms-auto">20</span>
+                                        {{-- <span class="badge bg-music rounded-pill ms-auto"></span> --}}
                                     </div>
                                 </div>
                             </div>

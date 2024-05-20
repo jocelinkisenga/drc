@@ -1,5 +1,5 @@
 <div>
-    <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+    <form method="get" class="custom-form mt-3 pt-2 mb-lg-0 mb-3" role="search">
         <div class="input-group input-group-lg">
             <span class="input-group-text bi-search" id="basic-addon1">
 
@@ -13,7 +13,7 @@
         </div>
     </form>
     @if (sizeof($searchPosts) > 0)
-    <div class="dropdown-menu d-block py-0  mt-3">
+    <div class="dropdown-menu d-block py-0  mt-1">
 
         @foreach ($searchPosts as $search)
         <div class="px-3 py-1  border-bottom mb-lg-0">
@@ -30,5 +30,7 @@
     </div>
 
     @endif
+
+
 
 </div>

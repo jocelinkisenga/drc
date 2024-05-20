@@ -2,7 +2,7 @@
 @section("content")
 
 <section class="explore-section section-padding" id="section_2">
-    <div class="container-fluid">
+    {{-- <div class="container-fluid">
         <div class="row">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
 
@@ -13,7 +13,7 @@
                 @endforeach
             </ul>
         </div>
-    </div>
+    </div> --}}
     <div class="container">
 
         <div class="col-12 text-center">

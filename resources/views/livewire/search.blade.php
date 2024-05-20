@@ -5,7 +5,7 @@
 
             </span>
 
-            <input wire:model.live.debounce.5OOms="keyword" type="search" class="form-control" id="keyword" placeholder="cherche ton endroit..." aria-label="Search">
+            <input wire:model.debounce.5OOms="keyword" type="search" class="form-control" id="keyword" placeholder="cherche ton endroit..." aria-label="Search">
 
             {{-- <button type="submit" class="form-control"> <span class="text-primary">che</span>
                 <span class="text-warning">r</span>

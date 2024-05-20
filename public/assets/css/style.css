@@ -12,7 +12,7 @@ https://templatemo.com/tm-590-topic-listing
  :root {
   --white-color:                  #ffffff;
   --primary-color:                #13547a;
-  --secondary-color:              #080baa;
+  --secondary-color:              hsl(239, 77%, 44%);
   --section-bg-color:             #f0f8ff;
   --custom-btn-bg-color:          #80d0c7;
   --custom-btn-bg-hover-color:    #13547a;
@@ -43,7 +43,7 @@ https://templatemo.com/tm-590-topic-listing
   --font-weight-medium:           500;
   --font-weight-semibold:         600;
   --font-weight-bold:             700;
-} 
+}
 
 body {
   background-color: var(--white-color);
@@ -147,7 +147,7 @@ strong {
 }
 
 .section-overlay {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(15deg, #041c86 0%, #404be0 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -248,7 +248,7 @@ strong {
   SITE HEADER
 -----------------------------------------*/
 .site-header {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(15deg, #041c86 0%, #404be0 100%);
   padding-top: 150px;
   padding-bottom: 80px;
 }
@@ -483,10 +483,10 @@ strong {
 
 
 /*---------------------------------------
-  HERO
+  HERO changement
 -----------------------------------------*/
 .hero-section {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(15deg, #041c86 0%, #404be0 100%);
   position: relative;
   overflow: hidden;
   padding-top: 150px;

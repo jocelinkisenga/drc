@@ -1,65 +1,65 @@
 @extends("layouts.main")
 @section("content")
 
-            <section class="explore-section section-padding" id="section_2">
-                            <div class="container-fluid">
-                    <div class="row">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+<section class="explore-section section-padding" id="section_2">
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
 
                 @foreach($categories as $key => $category)
-                            <li class="nav-item" role="presentation">
-                                <a href="{{ route("front.categorie",["id" => $category->id]) }}"  class="nav-link active" id="{{ $category->title }}">{{ $category->title }}</a>
-                            </li>
+                <li class="nav-item" role="presentation">
+                    <a href="{{ route("front.categorie",["id" => $category->id]) }}" class="nav-link active" id="{{ $category->title }}">{{ $category->title }}</a>
+                </li>
                 @endforeach
-                        </ul>
-                    </div>
-                </div>
-                <div class="container">
+            </ul>
+        </div>
+    </div>
+    <div class="container">
 
-                        <div class="col-12 text-center">
-                            <h2 class="mb-4">Decouvrez vos endroits préférés</h1>
-                        </div>
+        <div class="col-12 text-center">
+            <h2 class="mb-4">Decouvrez vos endroits préférés</h1>
+        </div>
 
-                    </div>
-                </div>
+    </div>
+    </div>
 
 
 
-                <div class="container">
-                    <div class="row">
+    <div class="container">
+        <div class="row">
 
-                        <div class="col-12 mt-3">
-                            <div class="tab-content" id="myTabContent">
+            <div class="col-12 mt-3">
+                <div class="tab-content" id="myTabContent">
 
-                                    <div class="tab-pane fade show active" id="{" role="tabpanel" aria-labelledby="" tabindex="0">
-                                    <div class="row">
+                    <div class="tab-pane fade show active" id="{" role="tabpanel" aria-labelledby="" tabindex="0">
+                        <div class="row">
 
-                                        @forelse ($posts as $post)
-                                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-4">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <a href="{{ route("posts.show", ["slug" => $post->slug]) }}">
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">{{ $post->title }}</h5>
+                            @forelse ($posts as $post)
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-4">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="{{ route("posts.show", ["slug" => $post->slug]) }}">
+                                        <div class="d-flex">
+                                            <div>
+                                                <h5 class="mb-2">{{ $post->title }}</h5>
 
-                                                            <p class="mb-0">{{ Illuminate\Support\Str::limit($post->slug, 18) }}</p>
-                                                        </div>
-
-                                                        <span class="badge bg-design rounded-pill ms-auto">{{ $post->viewers_count }}</span>
-                                                    </div>
-
-                                                    <img src="{{ asset("storage/uploads/". $post->image) }}" class="custom-block-image img-fluid" alt="">
-                                                </a>
+                                                <p class="mb-0">{{ Illuminate\Support\Str::limit($post->slug, 18) }}</p>
                                             </div>
+
+                                            <span class="badge bg-design rounded-pill ms-auto">{{ $post->viewers_count }}</span>
                                         </div>
-                                        @empty
 
-                                        @endforelse
-                                    </div>
+                                        <img src="{{ asset("storage/uploads/". $post->image) }}" class="custom-block-image img-fluid" alt="">
+                                    </a>
                                 </div>
+                            </div>
+                            @empty
+
+                            @endforelse
+                        </div>
+                    </div>
 
 
-                                {{-- <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
+                    {{-- <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
                                     <div class="row">
                                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
                                                 <div class="custom-block bg-white shadow-lg">
@@ -277,10 +277,10 @@
                                         </div>
                                     </div>
                                 </div> --}}
-                            </div>
-
-                    </div>
                 </div>
-            </section>
+
+            </div>
+        </div>
+</section>
 
 @endsection

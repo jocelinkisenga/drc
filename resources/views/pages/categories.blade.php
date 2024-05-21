@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-            <header class="site-header d-flex flex-column justify-content-center align-items-center">
+            {{-- <header class="site-header d-flex flex-column justify-content-center align-items-center">
                 <div class="container">
                     <div class="row align-items-center">
 
@@ -18,19 +18,19 @@
 
                     </div>
                 </div>
-            </header>
+            </header> --}}
 
 
-            <section class="section-padding">
+            <section class="section-padding  mt-3">
                 <div class="container">
                     <div class="row">
 
                         <div class="col-lg-12 col-12 text-center">
-                            <h3 class="mb-4">Dans la catégorie</h3>
+                            <h3 class="mb-4">{{ $category->title }}</h3>
                         </div>
 
                             @foreach ($posts as $post)
-                        <div class="col-lg-4 col-12 mt-3 mx-auto">
+                        <div class="col-lg-4 col-10 mt-3 mx-auto">
 
 
                             <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
@@ -39,11 +39,11 @@
 
                                     <div class="custom-block-topics-listing-info d-flex">
                                         <div>
-                                            <h5 class="mb-2">{{ $post->title }}</h5>
+                                            <h5 class="mb-1">{{ $post->title }}</h5>
 
                                             <p class="mb-0">{{ Illuminate\Support\Str::limit($post->slug, 30) }}</p>
 
-                                            <a href="{{ route("posts.show",["slug" => $post->slug]) }}" class="btn bg-primary text-white mt-3 mt-lg-4">En savoir plus</a>
+                                            <a href="{{ route("posts.show",["slug" => $post->slug]) }}" class="btn bg-primary text-white mt-2 mt-lg-4">En savoir plus</a>
                                         </div>
 
                                         {{-- <span class="badge bg-music rounded-pill ms-auto"></span> --}}

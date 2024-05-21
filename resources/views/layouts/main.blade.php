@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <i class="bi-back"></i>
+                    <i class="bi-back "></i>
                     <span class="text-primary">R</span>
                     <span class="text-danger">D</span>
                     <span class="text-warning">C</span>
@@ -41,8 +41,8 @@
                     {{-- <a href="#top" class="navbar-icon bi-person smoothscroll"></a> --}}
                 </div>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -75,20 +75,20 @@
         <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
 
             <div class="container">
-            <div class="row justify-center">
+                <div class="row justify-center">
                     <div class="container-fluid">
                         <div class="row">
                             <ul class="nav nav-tabs" style="background-color:none;" id="myTab" role="tablist">
 
                                 @foreach(\App\Models\Category::all() as $key => $category)
                                 <li class="nav-item " role="presentation">
-                                    <a href="{{ route("front.categorie",["id" => $category->id]) }}" class="nav-link text-white" id="{{ $category->title }}">{{ $category->title }}</a>
+                                    <a href="{{ route("front.categorie",["id" => $category->id]) }}" class="nav-link text-white fw-bold fs-5" id="{{ $category->title }}">{{ $category->title }}</a>
                                 </li>
                                 @endforeach
                             </ul>
                         </div>
                     </div>
-                    </div>
+                </div>
 
                 <div class="row">
 

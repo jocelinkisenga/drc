@@ -15,7 +15,7 @@ class HomeController extends Controller
 
     public function index() {
 $categories = Category::latest()->get();
-$posts = Post::inRandomOrder()->withCount("viewers")->latest()->limit(12)->get();
+$posts = Post::inRandomOrder()->withCount("viewers")->latest()->limit(3)->get();
 
         return view("pages.index",compact("categories", "posts"));
     }

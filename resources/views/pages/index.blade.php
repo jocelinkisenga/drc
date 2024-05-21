@@ -1,19 +1,58 @@
 @extends("layouts.main")
 @section("content")
+<section class="featured-section mt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-lg-4 col-10 mb-4 mb-lg-0">
+                <div class="custom-block bg-white shadow-lg">
+                    <a href="topics-detail.html">
+                        <div class="d-flex">
+                            <div>
+                                <h5 class="mb-2 yellowStyle">Web Design</h5>
+
+                                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente magni ea vitae deleniti quod incidunt quas eius aliquam beatae iure, dolores, dolorum vel cupiditate? Fugit hic amet possimus dolorum?</p>
+
+                            </div>
+
+                            
+                        </div>
+
+                        
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-10">
+                <div class="custom-block bg-white custom-block-overlay">
+                    <div class="d-flex flex-column h-100">
+
+
+                        <div class="custom-block-overlay-text d-flex">
+                            <div>
+                                <h5 class="yellowStyle mb-2">Finance</h5>
+
+                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente magni ea vitae deleniti quod incidunt quas eius aliquam beatae iure, dolores, dolorum vel cupiditate? Fugit hic amet possimus dolorum?</p>
+
+
+                            </div>
+
+                          
+                        </div>
+
+
+
+                        <div class="section-overlay"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 <section class="explore-section section-padding" id="section_2">
-    {{-- <div class="container-fluid">
-        <div class="row">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-
-                @foreach($categories as $key => $category)
-                <li class="nav-item" role="presentation">
-                    <a href="{{ route("front.categorie",["id" => $category->id]) }}" class="nav-link active" id="{{ $category->title }}">{{ $category->title }}</a>
-                </li>
-                @endforeach
-            </ul>
-        </div>
-    </div> --}}
     <div class="container">
 
         <div class="col-12 text-center">
@@ -35,7 +74,7 @@
                         <div class="row">
 
                             @forelse ($posts as $post)
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-4">
+                            <div class="col-lg-4 col-md-6 col-10 mb-4 mb-lg-4 mx-auto">
                                 <div class="custom-block bg-white shadow-lg">
                                     <a href="{{ route("posts.show", ["slug" => $post->slug]) }}">
                                         <div class="d-flex">
@@ -45,10 +84,10 @@
                                                 <p class="mb-0">{{ Illuminate\Support\Str::limit($post->slug, 18) }}</p>
                                             </div>
 
-                                            <span class="badge bg-design rounded-pill ms-auto">{{ $post->viewers_count }}</span>
+                                            <span class="badge bg-design rounded-pill ms-auto">{{ $post->viewers_count }}<i class="fa fa-eye"></i></span>
                                         </div>
 
-                                        <img src="{{ asset("storage/uploads/". $post->image) }}" class="custom-block-image img-fluid" alt="">
+                                        <img src="{{ asset("storage/uploads/". $post->image) }}" class="custom-block-image img-fluid" alt="{{ $post->title }}">
                                     </a>
                                 </div>
                             </div>
@@ -282,5 +321,130 @@
             </div>
         </div>
 </section>
+<section class="timeline-section section-padding" id="section_3">
+    <div class="section-overlay"></div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 text-center">
+                <h2 class="text-white mb-4">Visiter la RDC?</h1>
+            </div>
+
+            <div class="col-lg-10 col-12 mx-auto">
+                <div class="timeline-container">
+                    <ul class="vertical-scrollable-timeline" id="vertical-scrollable-timeline">
+                        <div class="list-progress">
+                            <div class="inner"></div>
+                        </div>
+
+                        <li>
+                            <h4 class="text-black mb-3">lorem ipsum</h4>
+
+                            <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente magni ea vitae deleniti quod incidunt quas eius aliquam beatae iure, dolores, dolorum vel cupiditate? Fugit hic amet possimus dolorum?</p>
+
+
+                            <div class="icon-holder">
+                                <i class="bi-search"></i>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h4 class="text-black mb-3">Bookmark &amp; Keep it for yourself</h4>
+
+                            <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente magni ea vitae deleniti quod incidunt quas eius aliquam beatae iure, dolores, dolorum vel cupiditate? Fugit hic amet possimus dolorum?</p>
+
+
+                            <div class="icon-holder">
+                                <i class="bi-bookmark"></i>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h4 class="text-black mb-3">lorem &amp; ipsm</h4>
+
+                            <p class="text-black">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi vero quisquam, rem assumenda similique voluptas distinctio, iste est hic eveniet debitis ut ducimus beatae id? Quam culpa deleniti officiis autem?</p>
+
+                            <div class="icon-holder">
+                                <i class="bi-book"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<section class="faq-section section-padding" id="section_4">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-12">
+                <h2 class="mb-4">QFP</h2>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-lg-5 col-12">
+                <img src="{{ asset("img/faq_graphic.jpg") }}" class="img-fluid" alt="FAQs">
+
+            </div>
+
+            <div class="col-lg-6 col-12 m-auto">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                               Lorem
+                            </button>
+                        </h2>
+
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente magni ea vitae deleniti quod incidunt quas eius aliquam beatae iure, dolores, dolorum vel cupiditate? Fugit hic amet possimus dolorum?
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Lorem
+                            </button>
+                        </h2>
+
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente magni ea vitae deleniti quod incidunt quas eius aliquam beatae iure, dolores, dolorum vel cupiditate? Fugit hic amet possimus dolorum?
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Lorem
+                            </button>
+                        </h2>
+
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente magni ea vitae deleniti quod incidunt quas eius aliquam beatae iure, dolores, dolorum vel cupiditate? Fugit hic amet possimus dolorum?
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 @endsection

@@ -1,5 +1,5 @@
 <div>
-    <form method="get" class="custom-form mt-3 pt-2 mb-lg-0 mb-3" role="search">
+    <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-4" role="search">
         <div class="input-group input-group-lg">
             <span class="input-group-text bi-search" id="basic-addon1">
 

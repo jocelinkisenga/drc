@@ -12,7 +12,7 @@ https://templatemo.com/tm-590-topic-listing
  :root {
   --white-color:                  #ffffff;
   --primary-color:                #13547a;
-  --secondary-color:              #fdfdfd;
+  --secondary-color:              #4784f7;
   --section-bg-color:             #fdfdfd;
   --custom-btn-bg-color:          #80d0c7;
   --custom-btn-bg-hover-color:    #13547a;
@@ -147,7 +147,7 @@ strong {
 }
 
 .section-overlay {
-  background-image: linear-gradient(15deg, #041c86 0%, #404be0 100%);
+  background-image: #4784f7;
   position: absolute;
   top: 0;
   left: 0;
@@ -166,9 +166,6 @@ strong {
   border-radius: var(--border-radius-medium);
 }
 
-.navbar-toggler-icon{
-    border-color: #041c86;
-}
 
 .nav-tabs {
 
@@ -247,12 +244,15 @@ strong {
   color: var(--white-color);
 }
 
-
+.yellowStyle {
+    color:blue;
+}
 /*---------------------------------------
   SITE HEADER
 -----------------------------------------*/
 .site-header {
-  background-image: linear-gradient(15deg, #ffffff 0%, hsl(0, 0%, 100%) 100%);
+  /* background-image: linear-gradient(15deg, #ffffff 0%, hsl(0, 0%, 100%) 100%); */
+    background-image: linear-gradient(15deg, hsl(224, 86%, 62%) 0%, hsl(231, 79%, 59%) 100%);
   padding-top: 50px;
   padding-bottom: 20px;
 }
@@ -494,7 +494,7 @@ strong {
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)) ,url("/img/hero.jpeg");
   position: relative;
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 100px;
   background-repeat: no-repeat;
   background-size: cover;

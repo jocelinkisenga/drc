@@ -34,7 +34,7 @@
         <div class="row">
 
             <div class="col-lg-8 col-10 m-auto">
-                <h3 class="mb-4">{{ $post->title }}</h3>
+                <h3 class="mb-4">{!! $post->title !!}</h3>
 
                 <blockquote>
                     {{ $post->slug }}

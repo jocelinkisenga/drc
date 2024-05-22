@@ -76,7 +76,7 @@
                             @forelse ($posts as $post)
                             <div class="col-lg-4 col-md-6 col-10 mb-4 mb-lg-4 mx-auto">
                                 <div class="custom-block bg-white shadow-lg">
-                                    <a href="{{ route("posts.show", ["slug" => $post->slug]) }}">
+                                    <a href="{{ route("posts.show", ["slug" => $post->slug, "id" => $post->id]) }}">
                                         <div class="d-flex">
                                             <div>
                                                 <h5 class="mb-2">{{ $post->title }}</h5>

@@ -51,7 +51,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-lg-5 me-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Acceuil</a>
+                            <a class="nav-link text-white" href="/">Acceuil</a>
                         </li>
 
                         {{-- <li class="nav-item">

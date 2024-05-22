@@ -62,10 +62,10 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(HttpFoundationRequest $request, $slug)
+    public function show(HttpFoundationRequest $request, $slug, $id)
     {
 
-        $post = Post::where("slug", $slug)->firstOrFail();
+        $post = Post::findOrFail($id);
         $categories = Category::all();
         $viewer = Viewer::where("post_id", $post->id)->where("user_ip_address", $request->ip())->first();
 

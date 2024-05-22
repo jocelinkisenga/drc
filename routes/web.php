@@ -24,7 +24,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,"index"])->name("home");
 Route::get("/live",[HomeController::class,"live"])->name("live");
-Route::get("article/{slug}",[PostController::class,"show"])->name("posts.show");
 Route::get("couponsHome/",[CouponController::class,"index"])->name("coupons.index");
 Route::get("frontPosts",[PostController::class,"front"])->name("posts.front");
 Route::get("category/{id}", [CategoryController::class, 'show'])->name("front.categorie");
@@ -55,4 +54,5 @@ Route::middleware('auth')->group(function () {
 
 });
 
+Route::get("article/{slug}/{id}",[PostController::class,"show"])->name("posts.show");
 require __DIR__.'/auth.php';

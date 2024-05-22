@@ -41,7 +41,9 @@
                                               {{ $item->created_at }}
                                             </td>
                                             <td>
-
+                                                <a href="{{ route("categorie.delete",["id" => $item->id]) }}" class="text-danger">
+                                                <i class="fa fa-delete-left"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                         @endforeach

@@ -20,6 +20,9 @@
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="admin/css/vertical-layout-light/style.css">
+      <link href="{{ asset("assets/fontawesome/css/fontawesome.min.css") }}" rel="stylesheet">
+      <link href="{{ asset("assets/fontawesome/css/all.css") }}" rel="stylesheet">
+
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
   <script src="https://cdn.tiny.cloud/1/05212pl2lik601zuc8u1kw9r5rjm0v6163l7se9rypgmh4m8/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>

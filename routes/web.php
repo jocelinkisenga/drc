@@ -51,6 +51,7 @@ Route::middleware('auth')->group(function () {
     Route::get("/videoDelete/{id}",[VideoController::class,"delete"])->name("video.delete");
     Route::get("categorie",[CategoryController::class, "create"])->name("categorie.create");
     Route::post("categorie", [CategoryController::class, "store"])->name("categorie.store");
+    Route::get("delete/categorie/{id}", [CategoryController::class, "destroy"])->name("categorie.delete");
 
 });
 

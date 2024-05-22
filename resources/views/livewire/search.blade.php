@@ -19,7 +19,7 @@
         <div class="px-3 py-1  border-bottom mb-lg-0">
 
             <div class="d-flex flex-column ml-3">
-                <a class="dropdown-item" href="{{ route("posts.show", ["slug" => $search->slug]) }}">{{ $search->title }}</a>
+                <a class="dropdown-item" href="{{ route("posts.show", ["slug" => $search->slug, "id" => $search->id]) }}">{{ $search->title }}</a>
 
             </div>
 

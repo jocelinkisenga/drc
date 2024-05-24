@@ -1,3 +1,3 @@
 <div>
-    {{-- The Master doesn't talk, he acts. --}}
+    <button class="btn btn-primary" type="button">Text</button>
 </div>
